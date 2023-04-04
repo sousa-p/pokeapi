@@ -69,6 +69,8 @@ body{
     width: 200px;
     height: 200px;
     margin: 10px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 #img__pokemon{
