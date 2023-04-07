@@ -1,23 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Press Start 2P', cursive;
 }
 
 body{
-    min-height: 100vh;
+    height: 100vh;
     max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-header {
+
+.container__pesquisar{
     width: 100%;
-    border-bottom: 4px solid #000;
-    min-height: 60px;
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,92 +32,78 @@ header {
     flex-wrap: wrap;
 }
 
-
 #input__pesquisar{
-    border: 4px solid #000;
+    border-radius: 10px;
     min-width: 30%;
     padding: 0.3em;
 }
 
 #btn__buscar{
-    background-color: #dc0a2d;
+    background-color: #159A9C;
     color: #ffff;
     padding: 0.2em 2.5em;
     border: 0;
-    border: 4px solid #000;
-    cursor: pointer;
+    border-radius: 10px;
 }
 
 .infos__pokemon{
-    flex: 2 1 250px;
-    width: 80%;
-    max-width: 640px;
-    background-color: #dc0a2d;
-    color: #fff;
-    border: 4px solid #000;
-    margin: 10px;
-    padding: 10px;
+    width: 40%;
+    background-color: #002333;
+    border-radius: 10px;
+    margin: 5px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.left_side, .right_side {
-    width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.right_side {
-    border-right: 2px solid #000;
+.infos__pokemon *{
+    color: white;
 }
 
-.left_side {
-    border-left: 2px solid #000;
-}
+
 
 #img__container{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 10px;
     background-color: white;
-    border: 4px solid #000;
+    border-radius: 10px;
 }
 
 #img__pokemon{
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 
 .atributos{
-    width: 66.666%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .nome__atributo{
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin: 0;
 }
 
+
 .atributos li{
-    font-size: .9em;
     list-style: none;
+    text-align: center;
     color: #fcf7f7d5;
 }
 
-@media(max-width:750px){
-    .infos__pokemon{
-        flex-direction: column;
-    }
+h1{
+    color: white;
+}
 
-    .right_side, .left_side {
-        border: none;
+@media(max-width:800px){
+    .infos__pokemon{
+        width: 90%;
     }
 }
