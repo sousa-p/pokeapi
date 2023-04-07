@@ -81,7 +81,7 @@ function tratarPesquisa (pesquisa) {
 
 function attPokemon (data) {
     pokemon.setName(primeiraLetraMaiusculo(data.name));
-    pokemon.setImg(data.sprites.front_default);
+    pokemon.setImg(data.sprites.other.home.front_default);
     pokemon.setHabilidades(data.abilities);
     pokemon.setFormas(data.forms);
     pokemon.setEspecie(data.species);
