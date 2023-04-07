@@ -5,7 +5,7 @@
 }
 
 body{
-    height: 100vh;
+    height:auto;
     max-width: 100vw;
     display: flex;
     flex-direction: column;
@@ -47,6 +47,7 @@ body{
 }
 
 .infos__pokemon{
+    min-height: 80vh;
     width: 40%;
     background-color: #002333;
     border-radius: 10px;
@@ -72,6 +73,7 @@ body{
     border-radius: 10px;
 }
 
+
 .atributos{
     display: flex;
     flex-direction: column;
@@ -91,8 +93,12 @@ body{
     text-align: center;
     color: #fcf7f7d5;
 }
+ul{
+    padding: 0;
+}
 
 h1{
+    text-align: center;
     color: white;
 }
 
