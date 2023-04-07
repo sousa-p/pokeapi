@@ -68,7 +68,6 @@ const pokemon = {
 
 // Funções
 function primeiraLetraMaiusculo (text) {
-    console.log(text)
     return text[0].toUpperCase() + text.substring(1)
 }
 
@@ -78,7 +77,7 @@ function tratarPesquisa (pesquisa) {
 
 function attPokemon (data) {
     pokemon.setName(primeiraLetraMaiusculo(data.name));
-    pokemon.setImg(data.sprites.front_default);
+    pokemon.setImg(data.sprites.other.home.front_default);
     pokemon.setHabilidades(data.abilities);
     pokemon.setFormas(data.forms);
     pokemon.setEspecie(data.species);
@@ -97,6 +96,7 @@ btnBuscar.addEventListener('click', () => {
         return response.json()
     })
     .then ((data) => {
+        console.log(data)
         attPokemon(data);
     })
 });
