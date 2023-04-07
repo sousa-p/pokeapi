@@ -4,6 +4,7 @@ const url = 'https://pokeapi.co/api/v2/pokemon/'
 const inputPesquisar = document.getElementById('input__pesquisar')
 const btnBuscar = document.getElementById('btn__buscar');
 
+// Objeto Pokemon
 const pokemon = {
     name: document.getElementById('name'),
     img: document.getElementById('img__pokemon'),
@@ -11,11 +12,11 @@ const pokemon = {
     formas: document.getElementById('formas'),
     especie: document.getElementById('especie'),
     tipos: document.getElementById('tipos'),
-    experiencia: document.getElementById('experiencie'),
+    experiencia: document.getElementById('experiencia'),
     altura: document.getElementById('altura'),
 
     setName: (text) => {
-        this.name.innerText = text;
+        pokemon.name.innerText = text;
     },
 
     setImg: (path) => {
@@ -96,7 +97,6 @@ btnBuscar.addEventListener('click', () => {
         return response.json()
     })
     .then ((data) => {
-        console.log(data)
         attPokemon(data);
     })
 });

@@ -9,7 +9,6 @@
     <!-- Bootstrap - CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-
     <!-- CSS customizado -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -25,51 +24,43 @@
     <div class="infos__pokemon">
         <h1 id="name">Pikachu</h1>
         <div id="img__container">
-            <img src="./assets/pikachu" alt="" id="img__pokemon">
+            <img src="./assets/pikachu" alt="notFound" id="img__pokemon">
         </div>
-        <div class="atributos" id="habilidades">
+        <div class="atributos">
             <p class="nome__atributo">Habilidades</p>
-            <ul>
+            <ul id="habilidades">
                 <li>Para raios</li>
                 <li>Estática</li>
             </ul>
         </div>
-        <div class="atributos" id="formas">
+        <div class="atributos">
             <p class="nome__atributo">Formas</p>
-            <ul>
+            <ul id="formas">
                 <li>Pikachu</li>
             </ul>
         </div>
-        <div class="atributos" id="espécie">
+        <div class="atributos">
             <p class="nome__atributo">Espécie</p>
-            <ul>
-                <li>Pikachu</li>
-            </ul>
+            <p id="especie">Pikachu</p>
 
         </div>
-        <div class="atributos" id="tipos">
+        <div class="atributos">
             <p class="nome__atributo">Tipos</p>
-            <ul>
+            <ul id="tipos">
                 <li>Elétrico</li>
             </ul>
 
         </div>
-        <div class="atributos" id="experiencie">
+        <div class="atributos">
             <p class="nome__atributo">Experiência</p>
-            <ul>
-                <li>112</li>
-            </ul>
+            <p id="experiencia"></p>
 
         </div>
-        <div class="atributos" id="altura">
+        <div class="atributos">
             <p class="nome__atributo">Altura</p>
-            <ul>
-                <li>4</li>
-            </ul>
-
+            <p id="altura"></p>
         </div>
     </div>
-
 
     <!-- Bootstrap - JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
