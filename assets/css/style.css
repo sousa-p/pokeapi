@@ -48,21 +48,16 @@ body{
 
 .infos__pokemon{
     width: 40%;
+    min-height: 550px;
     background-color: #002333;
     border-radius: 10px;
     margin: 5px;
-
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.infos__pokemon *{
-    color: white;
-}
-
-
 
 #img__container{
     width: 150px;
@@ -100,6 +95,11 @@ body{
 
 h1{
     color: white;
+}
+
+.spinner-border {
+    width: 100px;
+    height: 100px;
 }
 
 @media(max-width:800px){
