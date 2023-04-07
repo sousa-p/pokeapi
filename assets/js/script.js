@@ -4,8 +4,11 @@ const url = 'https://pokeapi.co/api/v2/pokemon/'
 const inputPesquisar = document.getElementById('input__pesquisar')
 const btnBuscar = document.getElementById('btn__buscar');
 
+const loading = document.querySelector('.spinner-border');
 // Objeto Pokemon
 const pokemon = {
+    container: document.querySelector('.pokemon'),
+    wrapper_atributos: document.querySelector('.wrapper_atributos'),
     name: document.getElementById('name'),
     img: document.getElementById('img__pokemon'),
     habilidades: document.getElementById('habilidades'),
@@ -84,6 +87,7 @@ function attPokemon (data) {
     pokemon.setTipos(data.types);
     pokemon.setExperiencia(data.base_experience);
     pokemon.setAltura(data.height);
+    pokemon.wrapper_atributos.classList.remove('d-none');
 }
 
 // Evento de clicar para pesquisar
@@ -91,12 +95,23 @@ btnBuscar.addEventListener('click', () => {
     let pesquisa;
     pesquisa = tratarPesquisa(inputPesquisar.value);
 
+    pokemon.container.classList.add('d-none');
+    loading.classList.remove('d-none');
+
     fetch (`${url}${pesquisa}`)
     .then ((response) => {
         return response.json()
     })
     .then ((data) => {
-        console.log(data)
         attPokemon(data);
+    })
+    .catch(() => {
+        pokemon.setName('');
+        pokemon.wrapper_atributos.classList.add('d-none');
+        pokemon.setImg('./assets/image/default.svg');
+    })
+    .finally (() => {
+        pokemon.container.classList.remove('d-none');
+        loading.classList.add('d-none');
     })
 });

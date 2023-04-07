@@ -7,75 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poke - API</title>
     <!-- Bootstrap - CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
     <!-- CSS customizado -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <header>
+    <div class="container__pesquisar">
         <div class="campo__pesquisar">
             <input id="input__pesquisar" type="text" placeholder="Nome do Pokémon">
             <button id="btn__buscar">Buscar</button>
         </div>
-    </header>
-
+    </div class="container__pesquisar">
     <div class="infos__pokemon">
-        <div class="right_side">
-            <h3 id="name">Pikachu</h1>
-            <div id="img__container">
-                <img src="./assets/pikachu" alt="notFound" id="img__pokemon">
-            </div>
+        <div class="spinner-border text-light d-none" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
-        <div class="left_side">
-            <div class="atributos">
-                <p class="nome__atributo">Habilidades</p>
-                <ul id="habilidades">
-                    <li>Para raios</li>
-                    <li>Estática</li>
-                </ul>
+        <div class="pokemon">
+            <h1 id="name"></h1>
+            <div id="img__container">
+                <img src="./assets/image/default.svg" alt="notFound" id="img__pokemon">
             </div>
-            <div class="atributos">
-                <p class="nome__atributo">Formas</p>
-                <ul id="formas">
-                    <li>Pikachu</li>
-                </ul>
-            </div>
-            <div class="atributos">
-                <p class="nome__atributo">Espécie</p>
-                <p id="especie">Pikachu</p>
-    
-            </div>
-            <div class="atributos">
-                <p class="nome__atributo">Tipos</p>
-                <ul id="tipos">
-                    <li>Elétrico</li>
-                </ul>
-    
-            </div>
-            <div class="atributos">
-                <p class="nome__atributo">Experiência</p>
-                <p id="experiencia"></p>
-    
-            </div>
-            <div class="atributos">
-                <p class="nome__atributo">Altura</p>
-                <p id="altura"></p>
+            <div class="wrapper_atributos d-none">
+
+                <div class="atributos">
+                    <p class="nome__atributo">Habilidades</p>
+                    <ul id="habilidades">
+                    </ul>
+                </div>
+                <div class="atributos">
+                    <p class="nome__atributo">Formas</p>
+                    <ul id="formas">
+                    </ul>
+                </div>
+                <div class="atributos">
+                    <p class="nome__atributo">Espécie</p>
+                    <ul id="especie">
+                    </ul>
+                </div>
+                <div class="atributos">
+                    <p class="nome__atributo">Tipos</p>
+                    <ul id="tipos">
+                    </ul>
+        
+                </div>
+                <div class="atributos">
+                    <p class="nome__atributo">Experiência</p>
+                    <p id="experiencia"></p>
+        
+                </div>
+                <div class="atributos">
+                    <p class="nome__atributo">Altura</p>
+                    <p id="altura"></p>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap - JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
     <!-- JS customizado -->
     <script src="./assets/js/script.js"></script>
 </body>
